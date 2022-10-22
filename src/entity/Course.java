@@ -10,6 +10,7 @@ public class Course {
     }
 
     private int id = generateRandomId();
+    private Category category;
     private String name;
     private String imgPath;
 
@@ -17,12 +18,20 @@ public class Course {
         double id = Math.random() * 100;
         return (int) id;
     }
-    
+
     public int getId() {
 
         return id;
     }
 
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
+    
     public String getName() {
         return name;
     }
