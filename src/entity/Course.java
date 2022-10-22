@@ -9,12 +9,17 @@ public class Course {
         setImgPath(imgPath);
     }
 
-    private int id = (int) Math.random();
+    private int id = generateRandomId();
     private String name;
     private String imgPath;
 
     public int getId() {
         return id;
+    }
+
+    private int generateRandomId() {
+        double idd = new Double(Math.random() * 100);
+        return (int) idd;
     }
 
     public String getName() {
