@@ -1,25 +1,22 @@
 package entity;
 
-public class Course {
-    public Course() {
+public class Category {
+    public Category() {
     }
 
-    public Course(String name, String imgPath) {
+    public Category(String name) {
         setName(name);
-        setImgPath(imgPath);
     }
 
     private int id = generateRandomId();
     private String name;
-    private String imgPath;
 
     private int generateRandomId() {
         double id = Math.random() * 100;
         return (int) id;
     }
-    
-    public int getId() {
 
+    public int getId() {
         return id;
     }
 
@@ -29,13 +26,5 @@ public class Course {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getImgPath() {
-        return imgPath;
-    }
-
-    public void setImgPath(String imgPath) {
-        this.imgPath = imgPath;
     }
 }
