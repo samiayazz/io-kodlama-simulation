@@ -6,7 +6,8 @@ public class Educator {
     public Educator() {
     }
 
-    public Educator(String firstName, String lastName) {
+    public Educator(List<Course> courses, String firstName, String lastName) {
+        setCourses(courses);
         setFirstName(firstName);
         setLastName(lastName);
     }
