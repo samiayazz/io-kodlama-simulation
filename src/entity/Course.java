@@ -4,13 +4,16 @@ public class Course {
     public Course() {
     }
 
-    public Course(String name, String imgPath) {
+    public Course(Category category, Educator educator, String name, String imgPath) {
+        setCategory(category);
+        setEducator(educator);
         setName(name);
         setImgPath(imgPath);
     }
 
     private int id = generateRandomId();
     private Category category;
+    private Educator educator;
     private String name;
     private String imgPath;
 
@@ -31,7 +34,15 @@ public class Course {
     public void setCategory(Category category) {
         this.category = category;
     }
-    
+
+    public Educator getEducator() {
+        return educator;
+    }
+
+    public void setEducator(Educator educator) {
+        this.educator = educator;
+    }
+
     public String getName() {
         return name;
     }
