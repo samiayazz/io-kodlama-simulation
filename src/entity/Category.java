@@ -1,14 +1,18 @@
 package entity;
 
+import java.util.List;
+
 public class Category {
     public Category() {
     }
 
-    public Category(String name) {
+    public Category(List<Course> courses, String name) {
+        setCourses(courses);
         setName(name);
     }
 
     private int id = generateRandomId();
+    private List<Course> courses;
     private String name;
 
     private int generateRandomId() {
@@ -18,6 +22,14 @@ public class Category {
 
     public int getId() {
         return id;
+    }
+
+    public List<Course> getCourses() {
+        return courses;
+    }
+
+    public void setCourses(List<Course> courses) {
+        this.courses = courses;
     }
 
     public String getName() {
