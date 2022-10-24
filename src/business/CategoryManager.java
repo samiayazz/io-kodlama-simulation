@@ -16,12 +16,14 @@ public class CategoryManager {
         return categoryDao.get();
     }
 
-    public void add(Category category) {
-        categoryDao.add(category);
+    public void add(Category category) throws Exception {
+        if (categoryDao.isCategoryNameExists(category.getName())) categoryDao.add(category);
+        else throw new Exception("Hata: Bu kategori adıyla daha önce sistemde bir kayıt oluşturulmuş.");
     }
 
-    public void update(int oldCategoryId, Category newCategory) {
-        categoryDao.update(oldCategoryId, newCategory);
+    public void update(int oldCategoryId, Category newCategory) throws Exception {
+        if (categoryDao.isCategoryNameExists(newCategory.getName())) categoryDao.update(oldCategoryId, newCategory);
+        else throw new Exception("Hata: Bu kategori adıyla daha önce sistemde bir kayıt oluşturulmuş.");
     }
 
     public void delete(int id) {

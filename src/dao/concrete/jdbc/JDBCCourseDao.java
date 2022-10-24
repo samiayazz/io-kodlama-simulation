@@ -13,6 +13,11 @@ public class JDBCCourseDao implements BaseCourseDao {
         return new ArrayList<Course>();
     }
 
+    public boolean isCourseNameExists(String name) {
+        //Control
+        return false;
+    }
+
     @Override
     public void add(Course course) {
         //JDBC Operations

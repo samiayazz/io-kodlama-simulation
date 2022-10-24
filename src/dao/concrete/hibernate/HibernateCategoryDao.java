@@ -13,6 +13,11 @@ public class HibernateCategoryDao implements BaseCategoryDao {
         return new ArrayList<Category>();
     }
 
+    public boolean isCategoryNameExists(String name) {
+        //Control
+        return false;
+    }
+
     @Override
     public void add(Category category) {
         //Hibernate Operations
