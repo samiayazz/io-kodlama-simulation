@@ -3,13 +3,13 @@ package entity;
 import java.util.List;
 
 public class Educator {
-    public Educator() {
-    }
-
     public Educator(List<Course> courses, String firstName, String lastName) {
         setCourses(courses);
         setFirstName(firstName);
         setLastName(lastName);
+    }
+    
+    public Educator() {
     }
 
     private int id = generateRandomId();

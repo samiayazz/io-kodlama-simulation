@@ -1,14 +1,14 @@
 package entity;
 
 public class Course {
-    public Course() {
-    }
-
     public Course(Category category, Educator educator, String name, String imgPath) {
         setCategory(category);
         setEducator(educator);
         setName(name);
         setImgPath(imgPath);
+    }
+    
+    public Course() {
     }
 
     private int id = generateRandomId();

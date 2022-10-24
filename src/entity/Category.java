@@ -3,12 +3,12 @@ package entity;
 import java.util.List;
 
 public class Category {
-    public Category() {
-    }
-
     public Category(List<Course> courses, String name) {
         setCourses(courses);
         setName(name);
+    }
+    
+    public Category() {
     }
 
     private int id = generateRandomId();
