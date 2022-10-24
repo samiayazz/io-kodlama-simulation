@@ -7,7 +7,7 @@ import java.util.List;
 public interface BaseEducatorDao {
     List<Educator> get();
 
-    void create(Educator educator);
+    void add(Educator educator);
 
     void update(int oldEducatorId, Educator newEducator);
 
