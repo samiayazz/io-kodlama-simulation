@@ -1,8 +1,7 @@
 package core.config;
 
-import core.enums.LogType;
-import core.enums.ORM;
+import core.logger.virtual.BaseLogger;
 
 public class Config {
-    public static LogType logType;
+    public static BaseLogger logger;
 }
